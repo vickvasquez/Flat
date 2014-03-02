@@ -1,0 +1,341 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+@font-face {
+	font-family: 'iphone';
+	src:url('fonts/icomoon.eot?wl0sm4');
+	src:url('fonts/icomoon.eot?#iefixwl0sm4') format('embedded-opentype'),
+		url('fonts/icomoon.woff?wl0sm4') format('woff'),
+		url('fonts/icomoon.ttf?wl0sm4') format('truetype'),
+		url('fonts/icomoon.svg?wl0sm4#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+body
+{
+	font-size: 16px;
+	font-family:Arial;
+}
+
+header 
+{
+	position: fixed;
+	background:url("header.png") repeat-x bottom #62E186;
+	background-size:1.6em;
+	padding:1em;
+	width:  100%;
+	height:50px;
+	z-index: 99;
+}
+
+header nav
+{
+	position: absolute;
+	right:3em;
+}
+
+header nav ul li
+{
+	display:inline-block;
+	vertical-align:top;
+	font-weight:normal;
+}
+header nav ul li a
+{
+	color: white;
+	background: #82FFC0;
+	font-size:1.5em;
+	text-decoration:none;
+	padding:0.5em;
+	color:gray
+}
+section
+{
+	background:#62E186;
+	padding-top:5em;
+	position:relative;
+	width: 100%;
+}
+article
+{
+ 	width:80%;
+ 	margin:2em auto;
+ 	position: relative;
+
+}
+section .instrucciones, section .telcel , section .flecha
+{
+	display:inline-block;
+	vertical-align:top;
+}
+section .instrucciones
+{
+	width:48%;
+}
+section .instrucciones h1
+{
+	font-size:3em;
+	color:rgba(255,255,255,0.8);
+}
+section .instrucciones p
+{
+	font-size:1.5em;
+	color:rgba(255,255,255,0.8);
+	margin-top:1em;
+}
+section .instrucciones ul
+{
+	margin:3em 4em;
+}
+section .instrucciones ul li
+{
+	list-style:none;
+	margin-top:2em
+}
+section .instrucciones ul .active:before
+{
+	font-family:"iphone";
+	content:"\e601";
+	color: white;
+	margin-right:0.5em;
+}
+section .instrucciones ul li a
+{
+	text-decoration:none;
+	font-size:2em;
+	cursor: normal;
+	color:rgba(255,255,255,0.7);
+}
+section .flecha
+{
+	position: absolute;
+	top:50%;
+	left:35%;
+	width:55%;
+	height:10px;
+}
+section .flecha .cola, section .flecha .punta
+{
+	display: inline-block;
+	vertical-align:middle;
+}
+section .flecha .cola
+{
+/*	background:red;
+	height:50px;
+	position: relative;
+	width:20%;*/
+	border-left:55px solid #62E186;
+	border-top:40px solid transparent;
+	border-bottom:40px solid transparent;
+	position: relative;
+	left:2em;
+	z-index:44
+}
+section .flecha .punta
+{
+	left:-0.3em;	
+	position: relative;
+	border-left:65px solid rgba(255,255,255,0.5);
+	cursor:pointer;
+	border-top:50px solid transparent;
+	border-bottom:50px solid transparent;
+
+	/*transform:rotate(7deg);
+	-ms-transform:rotate(7deg); IE 9
+	-webkit-transform:rotate(7deg);*/
+
+}
+section article .telcel
+{
+	background:black;
+	border-radius: 1.5em;
+	box-shadow:0 0 1px 5px rgba(255,255,255,0.3);
+	height:450px;
+	padding-bottom:2em;
+	padding-left:1em;
+	padding-right:1em;
+	padding-top:5em;	
+	position:relative;
+	left:25%;
+	width:25%;
+
+}
+section article .telcel:before 
+{
+	border:10px solid black;
+	content:"";
+	position: absolute;
+	top:6em;
+	left:-0.2em;
+}
+section article
+{
+	margin-bottom:1em;
+}
+section article:nth-child(even) .telcel
+{
+	left:0%;
+}
+section article:nth-child(even) .instrucciones
+{
+	position: relative;
+	left:25%;
+}
+
+section .telcel .centro
+{
+	background: #1e5799; /* Old browsers */
+	border-radius:50%;
+	bottom:10px;
+	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	cursor:pointer;
+	display:block;
+	height:50px;
+	left:42%;
+	padding-top:1em;
+	position:relative;
+	text-align:center;
+	top:1em;
+	width:50px;
+    /*background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#1e5799), color-stop(50%,#2989d8), color-stop(51%,#207cca), color-stop(100%,#7db9e8));*/
+    background: -moz-linear-gradient(top, #1e5799 0%, #2989d8 50%, #207cca 51%, #7db9e8 100%); /* FF3.6+ */
+   background:  -webkit-gradient(linear, left top, left bottom, color-stop(0%,#070808), color-stop(50%,#322F2F), color-stop(51%,#38393B), color-stop(100%,#93979A));
+}
+
+section .telcel .centro:after
+{
+	font-family:"iphone";
+	content: "\e600";
+	font-size: 1.3em;
+	color:#ccc;
+}
+section .telcel .barrita 
+{
+	border:4px solid black;
+	background:gray;
+	border-radius:10px;
+	height:10px;
+	position: absolute;
+	left:35%;
+	top: 5%;
+	width:70px
+}
+section .telcel .adentro
+{
+	height:400px;
+	position:relative;
+	background:rgb(152, 173, 197);
+	
+}
+
+section .telcel .adentro .estado
+{
+	background:rgba(0,0,0,0.8);
+	height:20px;
+	width:100%;
+}
+section .telcel .adentro .estado .senal, section .telcel .adentro .estado .hora, section .telcel .adentro .estado .bateria
+{
+	color:white;
+	display:inline-block;
+	font-size:0.7em;
+	padding-top:2px;
+	vertical-align:top;
+	width:30%;
+}
+section .telcel .adentro .estado .hora {
+	text-align: center;
+}
+section .telcel .adentro .estado .bateria
+{
+	height: 15px;
+	overflow: hidden;
+	position: absolute;
+	right: 0;
+	text-align:center;
+}
+section .telcel .adentro .estado .bateria .bat
+{
+	background:rgb(3, 172, 3);
+	border-radius:2px;
+	height:10px;
+	position: absolute;
+	right:1em;
+	top:5px;
+	width:20px;
+}
+section .telcel .adentro .estado .bateria .bat:after
+{
+	content: "";
+	border: 2px solid rgb(3, 172, 3);
+	position: absolute;
+	right: -0.2em;
+	top: 3px;
+}
+
+section .telcel .adentro .titulo
+{
+	background:#1E5EAB;
+	text-align:center;
+	padding:0.5em 0.5em;
+	font-weight:bold;
+	font-size:1.3em;
+	color:white;
+}
+section .telcel .adentro .contenido
+{
+	margin:10px;
+}
+section .telcel .adentro .enca
+{
+	padding-left:10px
+}
+section .telcel .adentro .contenido .descrip
+{
+	border-radius:10px;
+	border:2px solid #ccc;
+	margin-top:10px;
+	background:white;
+}
+section .telcel .adentro .contenido .descrip ul
+{
+	margin:0;
+
+}
+
+section .telcel .adentro .contenido .descrip  ul li
+{
+	list-style-type:none;
+	font-weight: bold;
+	margin-top:15px;
+	margin-bottom:15px;
+	border-bottom: 2px solid #ccc;
+	line-height:2px;
+	height:20px
+}
+
+section .telcel .adentro .contenido .descrip  ul li .x
+{
+	margin-left: 10px;
+	float:left;
+}
+
+section .telcel .adentro .contenido .descrip ul li .res
+{
+	color:#0080C0;
+	/*float:right;*/
+	right:2em;
+	position: absolute;
+	font-weight:normal;
+}
+
+footer
+{
+	background:orangered;
+	height:50px;
+
+}
